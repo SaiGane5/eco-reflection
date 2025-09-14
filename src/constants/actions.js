@@ -2,38 +2,42 @@
 export const DAILY_ACTIONS = [
   { 
     id: 'a1', 
-    text: 'Shower with a bucket to save 50+ liters per wash.',
-    icon: '🚿',
-    impact: 'Saves 50L water'
+    text: 'Generated SINGLE USE PLASTIC waste',
+    icon: ''
   },
   { 
     id: 'a2', 
-    text: 'Use the "Fridge First" rule to cut food waste.',
-    icon: '🍎',
-    impact: 'Reduces food waste'
+    text: 'Paper Waste (stationary waste)',
+    icon: ''
   },
   { 
     id: 'a3', 
-    text: 'Delete old emails to reduce digital carbon footprints.',
-    icon: '📧',
-    impact: 'Cuts digital carbon'
+    text: 'Drink tea/coffee from a reusable cup',
+    icon: ''
   },
   { 
     id: 'a4', 
-    text: 'Turn off lights if leaving a room for 5+ minutes.',
-    icon: '💡',
-    impact: 'Saves energy'
+    text: 'Food Waste (mess/canteen)',
+    icon: ''
   },
   { 
     id: 'a5', 
-    text: 'Only buy items that can be reused or upcycled.',
-    icon: '♻️',
-    impact: 'Reduces waste'
+    text: 'Segregation of waste in HOSTEL',
+    icon: ''
   },
   { 
     id: 'a6', 
-    text: 'Place a filled bottle in the toilet tank to save water.',
-    icon: '🚰',
-    impact: 'Saves 1-2L per flush'
+    text: 'Use reusable shopping bags when you go out.',
+    icon: ''
+  },
+  { 
+    id: 'a7', 
+    text: 'Consumed any fast food from vending machine',
+    icon: ''
+  },
+  { 
+    id: 'a8', 
+    text: 'Glass/Medicinal/Cosmetic/Hazardous waste',
+    icon: ''
   },
 ];

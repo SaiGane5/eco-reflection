@@ -4,6 +4,15 @@ import { differenceInCalendarDays } from 'date-fns';
 import { auth, db } from '../firebase/config';
 
 const firestoreService = {
+  // Get users sorted by streak descending
+  getLeaderboardUsers: async () => {
+    const q = query(
+      collection(db, firestoreService.USER_COLLECTION),
+      orderBy('streak', 'desc')
+    );
+    const querySnapshot = await getDocs(q);
+    return querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+  },
   USER_COLLECTION: 'users',
   REFLECTIONS_COLLECTION: 'reflections',
   STREAK_BREAKS_COLLECTION: 'streakBreaks',

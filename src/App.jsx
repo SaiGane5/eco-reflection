@@ -59,6 +59,10 @@ export default function App() {
     switch (currentScreen) {
       case 'history':
         return <HistoryScreen userId={user.uid} navigate={setCurrentScreen} />;
+      case 'leaderboard':
+        // Lazy import to avoid circular dependency
+        const LeaderboardScreen = require('./screens/LeaderboardScreen').default;
+        return <LeaderboardScreen navigate={setCurrentScreen} />;
       case 'home':
       default:
         return (

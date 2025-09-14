@@ -140,6 +140,12 @@ const HomeScreen = ({ user, navigate, userData, refreshUserData }) => {
       <div className="md:w-80 flex flex-col gap-8 md:sticky md:top-8">
         <StreakDisplay streak={userData.streak || 0} />
         <CalendarButton />
+        <button
+          onClick={() => navigate('leaderboard')}
+          className="w-full text-center text-green-700 hover:text-green-900 font-semibold py-3 px-4 rounded hover:bg-green-50 transition-colors"
+        >
+          🏆 View Leaderboard
+        </button>
       </div>
       <StreakBreakModal 
         show={isStreakModalOpen} 

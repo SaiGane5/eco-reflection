@@ -28,9 +28,9 @@ const ActionItem = ({ action, isChecked, onToggle }) => {
           )}
         </div>
         {/* Sustainability icon placeholder */}
-        <span className="text-xl" role="img" aria-label="sustainability">🌱</span>
+        {/* <span className="text-xl" role="img" aria-label="sustainability">🌱</span> */}
         <div className="flex-1">
-          <div className="flex items-center space-x-3 mb-2">
+          <div className="flex items-center space-x-3">
             <span className="text-2xl">{action.icon}</span>
             <span className={`
               font-medium transition-colors
@@ -39,15 +39,14 @@ const ActionItem = ({ action, isChecked, onToggle }) => {
               {action.text}
             </span>
           </div>
-          <div className={`
+          {/* <div className={`
             text-sm px-3 py-1 rounded inline-block
             ${isChecked 
               ? 'bg-green-100 text-green-700' 
               : 'bg-gray-50 text-green-700'
             }
           `}>
-            Impact: {action.impact}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
