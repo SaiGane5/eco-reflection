@@ -112,18 +112,14 @@ const HomeScreen = ({ user, navigate, userData, refreshUserData }) => {
                 ))}
               </div>
               <button 
-                onClick={handleSubmit} 
-                disabled={completedCount === 0}
+                onClick={handleSubmit}
                 className={`
                   w-full font-bold py-4 px-6 rounded shadow transition-colors text-lg
-                  ${completedCount > 0 
-                    ? 'bg-green-600 hover:bg-green-700 text-white' 
-                    : 'bg-gray-200 text-gray-500 cursor-not-allowed'
-                  }
+                  bg-green-600 hover:bg-green-700 text-white
                 `}
               >
                 {completedCount === 0 
-                  ? 'Select at least one action to continue' 
+                  ? 'Reflect for Today (No actions selected)' 
                   : `Complete ${completedCount} Action${completedCount !== 1 ? 's' : ''} for Today`}
               </button>
             </div>
