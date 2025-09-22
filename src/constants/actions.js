@@ -17,7 +17,7 @@ export const DAILY_ACTIONS = [
   },
   { 
     id: 'a4', 
-    text: 'Planned a group order at Zaitoon/HFC/Swiggy with friends to ensure every dish would be finished',
+    text: 'Didn\'t take extra food the first time just to avoid going to the counter again.',
     icon: ''
   },
   { 
@@ -25,19 +25,19 @@ export const DAILY_ACTIONS = [
     text: 'Shared biscuits from an already opened packet with friends before they stale',
     icon: ''
   },
-  { 
-    id: 'a6', 
-    text: 'Talked with friends while eating',
-    icon: ''
-  },
+  // { 
+  //   id: 'a6', 
+  //   text: 'Talked with friends while eating',
+  //   icon: ''
+  // },
   { 
     id: 'a7', 
-    text: 'Didn\'t take extra food the first time just to avoid going to the counter again.',
+    text: 'Segregated food waste in the hostel into dry and wet waste whenever applicable',
     icon: ''
   },
   { 
     id: 'a8', 
-    text: 'Segregated food waste in the hostel into dry and wet waste whenever applicable',
+    text: 'Planned a group order at Zaitoon/HFC/Swiggy with friends to ensure every dish would be finished',
     icon: ''
   },
 ];
