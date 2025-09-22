@@ -32,7 +32,7 @@ export const DAILY_ACTIONS = [
   },
   { 
     id: 'a7', 
-    text: 'Didn\'t take extra food the first time to avoid going to the counter again.',
+    text: 'Didn\'t take extra food the first time just to avoid going to the counter again.',
     icon: ''
   },
   { 
