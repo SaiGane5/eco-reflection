@@ -25,19 +25,24 @@ export const DAILY_ACTIONS = [
     text: 'Shared biscuits from an already opened packet with friends before they stale',
     icon: ''
   },
-  // { 
-  //   id: 'a6', 
-  //   text: 'Talked with friends while eating',
-  //   icon: ''
-  // },
+  { 
+    id: 'a6', 
+    text: '⁠I have not consumed any food from the vending machine',
+    icon: ''
+  },
   { 
     id: 'a7', 
-    text: 'Segregated food waste in the hostel into dry and wet waste whenever applicable',
+    text: 'Segregated food waste into dry and wet waste whenever applicable',
     icon: ''
   },
   { 
     id: 'a8', 
     text: 'Planned a group order at Zaitoon/HFC/Swiggy with friends to ensure every dish would be finished',
+    icon: ''
+  },
+  { 
+    id: 'a9', 
+    text: 'Gently washed the food packing before throwing into the dry bin',
     icon: ''
   },
 ];
