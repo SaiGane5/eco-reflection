@@ -11,6 +11,7 @@ import firestoreService from '../services/firestoreService';
 const HomeScreen = ({ user, navigate, userData, refreshUserData }) => {
   const [checkedActions, setCheckedActions] = useState({});
   const [isStreakModalOpen, setStreakModalOpen] = useState(false);
+  const [comment, setComment] = useState("");
 
   useEffect(() => {
     if (userData.lastReflectionDate) {
@@ -28,15 +29,17 @@ const HomeScreen = ({ user, navigate, userData, refreshUserData }) => {
   const handleSubmit = async () => {
     try {
       await firestoreService.saveReflection(
-        user.uid, 
-        checkedActions, 
-        DAILY_ACTIONS.length, 
-        userData.streak, 
-        userData.lastReflectionDate
+        user.uid,
+        checkedActions,
+        DAILY_ACTIONS.length,
+        userData.streak,
+        userData.lastReflectionDate,
+        comment // Pass comment to service
       );
       alert('Success! Your checklist has been saved.');
       refreshUserData();
       setCheckedActions({});
+      setComment("");
     } catch (error) {
       console.error("Error saving reflection:", error);
       alert('Error: Could not save your checklist.');
@@ -110,6 +113,22 @@ const HomeScreen = ({ user, navigate, userData, refreshUserData }) => {
                     onToggle={() => handleToggleAction(action.id)} 
                   />
                 ))}
+              </div>
+              {/* Comment input */}
+              <div className="mb-6">
+                <label htmlFor="reflection-comment" className="block text-gray-700 font-semibold mb-2">
+                  Comments (optional):
+                </label>
+                <textarea
+                  id="reflection-comment"
+                  value={comment}
+                  onChange={e => setComment(e.target.value)}
+                  rows={3}
+                  className="w-full p-3 border border-gray-200 rounded focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all resize-none"
+                  placeholder="Share your thoughts or feedback..."
+                  maxLength={300}
+                />
+                <div className="text-right text-sm text-gray-500 mt-1">{comment.length}/300</div>
               </div>
               <button 
                 onClick={handleSubmit}

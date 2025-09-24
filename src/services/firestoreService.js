@@ -44,13 +44,13 @@ const firestoreService = {
     return initialData;
   },
   
-  saveReflection: async (uid, answers, totalActions, currentStreak, lastReflectionDate) => {
+  saveReflection: async (uid, answers, totalActions, currentStreak, lastReflectionDate, comment = "") => {
     const today = new Date();
-    
     await addDoc(collection(db, firestoreService.USER_COLLECTION, uid, firestoreService.REFLECTIONS_COLLECTION), {
       answers,
       date: Timestamp.fromDate(today),
       totalActions: totalActions,
+      comment: comment || ""
     });
 
     let newStreak = 1;
@@ -60,10 +60,9 @@ const firestoreService = {
         newStreak = currentStreak + 1;
       }
     }
-    
     const userDocRef = doc(db, firestoreService.USER_COLLECTION, uid);
     await setDoc(userDocRef, {
-      streak: newStreak, 
+      streak: newStreak,
       lastReflectionDate: Timestamp.fromDate(today)
     }, { merge: true });
   },
